@@ -1,8 +1,33 @@
-# React + Vite
+# TUGAS OOP CODEMASTERS
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+UNTUK TUGAS INI BERISI TUGAS MEMBUAT Website Bookoe yang berisi beberapa Navigasi yaitu All data Buku, LatestBook, dan Top Pick Buku
 
-Currently, two official plugins are available:
+# **CARA PENGGUNAAN**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1.SILAHKAN CLONE REPOSITORY INI DENGAN CARA
+
+-Untuk yang HTTPS:  
+
+```
+git clone https://github.com/purwoceng/react-bookoe.git
+```
+- Untuk yang SSH :
+```
+git clone git@github.com:purwoceng/react-bookoe.git
+```
+
+
+2. SETELAH CLONE BERHASIL SILAHKAN UNTUK MASUK KE CODE EDITOR DAN LANGSUNG JALANKAN PERINTAH
+```
+npm install
+```
+Setelah jalankan kode dengan
+```
+npm run dev
+```
+
+
+
+
+  
+
