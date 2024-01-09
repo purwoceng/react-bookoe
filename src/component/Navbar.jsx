@@ -33,7 +33,7 @@ function Navbar() {
           Rekomendasi Bukumu
         </p>
       </Link>
-      <div className="navbar-center hidden ml-40 lg:flex  text-[20px] text-sm font-light font-['Poppins']">
+      <div className="navbar-center  ml-40 lg:flex  text-[20px] text-sm font-light font-['Poppins']">
         <ul className="menu menu-horizontal px-1">
           <li>
             <NavLink

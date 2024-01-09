@@ -53,14 +53,6 @@ const DetailBook = () => {
       </div>
     </div>
   );
-
-  // <div>
-  //   <h2>Book Details</h2>
-  //   <p>Title: {detailBook.title}</p>
-  //   {/* <p>Author: {detailBook.author.name}</p> */}
-  //   <p>Rating: {detailBook.rating}</p>
-  //   {/* Add more details as needed */}
-  // </div>
 };
 
 export default DetailBook;

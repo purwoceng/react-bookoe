@@ -45,24 +45,26 @@ const Hero = ({ result }) => {
             <span className="mr-2">See All Recomendations</span>
           </button>
         </div>
-        <Link
-          key={result.id}
-          to={`/books/${result[0]?.id}`}
-          className="ml-4 relative"
-        >
-          <img
-            className="rounded-[10px] w-[175px] h-[280px] absolute right-[50px] top-12"
-            src={result[0]?.image_url}
-          ></img>
-          <img
-            className="rounded-[10px] w-[200.14px] h-[330px] mb-4 absolute right-[160px] top-7"
-            src={result[1]?.image_url}
-          ></img>
+        <div className="ml-4 relative">
+          <Link key={result.id} to={`/books/${result[2]?.id}`}>
+            <img
+              className="rounded-[10px] w-[175px] h-[280px] absolute right-[50px] top-12"
+              src={result[2]?.image_url}
+            ></img>
+          </Link>
+
+          <Link key={result.id} to={`/books/${result[1]?.id}`}>
+            <img
+              className="rounded-[10px] w-[200.14px] h-[330px] mb-4 absolute right-[160px] top-7"
+              src={result[1]?.image_url}
+            ></img>
+          </Link>
+
           <img
             className="rounded-[10px] w-[280.14px] h-[390px] top-0 left-[75px] absolute "
-            src={result[2]?.image_url}
+            src={result[0]?.image_url}
           ></img>
-        </Link>
+        </div>
       </div>
     </div>
   );

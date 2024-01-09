@@ -16,8 +16,8 @@ const BookTop = ({ result }) => {
       </p>
       <StarRating rating={result.rating} />
       <div dir="rtl">
-        <div className="bg-violet-600 w-[100px] rounded-s-lg text-center h-8 relative right-[200px] bottom-[480px] font-semibold text-white">
-          <div className="rounded-full h-6 w-6 bg-white text-black items-center mr-8 mt-2">
+        <div className="bg-violet-600 w-[75px] rounded-s-lg text-center h-8 relative right-[226px] bottom-[480px] font-semibold text-white relative">
+          <div className="rounded-full h-6 w-6 bg-white text-black items-center mr-8 mt-1 absolute">
             {result.nomorUrut}
           </div>
         </div>
@@ -26,7 +26,7 @@ const BookTop = ({ result }) => {
       <Link
         key={result.id}
         to={`/books/${result.id}`}
-        className="bg-button1 hover:bg-gray-400 text-violet-500 font-bold py-2 px-20 rounded inline-flex items-center mt-4  border-solid border-4 border-gray-200"
+        className="hover:bg-violet-400 hover:text-white text-violet-500 font-bold py-2 px-20 rounded-lg inline-flex items-center mt-4  border-solid border-2 border-gray-200"
       >
         <span className="mr-2">Read Book</span>
       </Link>

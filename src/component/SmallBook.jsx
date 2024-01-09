@@ -18,7 +18,7 @@ const SmallBook = ({ result }) => {
       <Link
         key={result.id}
         to={`/books/${result.id}`}
-        className="bg-button1 hover:bg-gray-400 text-violet-500 font-bold py-2 w-[270px] rounded inline-flex items-center mt-4  border-solid border-4 border-gray-200"
+        className=" hover:bg-violet-400 hover:text-white text-violet-500 font-bold py-2 w-[270px] rounded-lg inline-flex items-center mt-4  border-solid border-2 border-gray-200"
       >
         <span className="ml-20">Read Book</span>
       </Link>

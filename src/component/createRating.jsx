@@ -9,19 +9,15 @@ const StarRating = ({ rating }) => {
     if (index < filledStars) {
       return (
         <span key={index} className="text-yellow-400">
-          &#9733;
+          ⭐
         </span>
       );
     } else if (hasHalfStar && index === filledStars) {
-      return (
-        <span key={index} className="text-yellow-400">
-          &#9734;&#9733;
-        </span>
-      );
+      return <span key={index} className="text-yellow-400"></span>;
     } else {
       return (
         <span key={index} className="text-gray-300">
-          &#9734;
+          🌟
         </span>
       );
     }

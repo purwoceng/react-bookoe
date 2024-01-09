@@ -16,7 +16,7 @@ const Latest = () => {
       const sortedData = data.sort(
         (a, b) => new Date(b.created_at) - new Date(a.created_at)
       );
-      const slicedata = sortedData.slice(0, 4);
+      const slicedata = sortedData.slice(0, 20);
       console.log(slicedata);
       setLatestBook(slicedata);
     } catch (error) {
@@ -31,7 +31,7 @@ const Latest = () => {
   return (
     <>
       <HeroLatest />
-      <div className="grid grid-cols-4 gap-4 m-12">
+      <div className="grid grid-cols-4 mb-32 gap-4 m-12">
         {latestBook.map((result) => (
           <SmallLatest key={result.isbn} result={result} />
         ))}

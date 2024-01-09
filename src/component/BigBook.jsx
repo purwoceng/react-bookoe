@@ -5,7 +5,7 @@ const BigBook = ({ result }) => {
   return (
     <div className="grid grid-cols-2 justify-between">
       <img className="w-[277px] h-[346px]" src={result.image_url}></img>
-      <div>
+      <div className="relative">
         <p className="text-black text-2xl font-semibold font-['Poppins'] line-clamp-2">
           {result.title}
         </p>
@@ -23,7 +23,7 @@ const BigBook = ({ result }) => {
         <Link
           key={result.id}
           to={`/books/${result.id}`}
-          className="bg-button1 hover:bg-gray-400 text-violet-500 font-bold py-2 px-4 rounded inline-flex items-center mt-4  border-solid border-4 border-gray-200"
+          className="hover:bg-violet-400 hover:text-white text-violet-500 font-bold py-2 px-20 rounded-lg inline-flex items-center border-solid border-2 border-gray-200 absolute bottom-0"
         >
           <span className="mr-2">Read Book</span>
         </Link>

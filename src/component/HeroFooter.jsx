@@ -3,7 +3,7 @@ import { FaEnvelope } from "react-icons/fa";
 const HeroFooter = () => {
   return (
     <>
-      <div className="container h-auto ml-12 border border-solid rounded-xl bg-button mt-4 pb-[100px]">
+      <div className="container h-auto ml-12 border border-solid rounded-xl bg-button mt-12 pb-[100px]">
         <div className="w-[794px] mx-auto text-center mt-14 text-white text-[42px] font-semibold font-['Poppins']">
           Join our newsletter to get our latest recommendation!
         </div>
