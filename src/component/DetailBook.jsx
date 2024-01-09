@@ -1,6 +1,7 @@
 import moment from "moment";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import StarRating from "./createRating";
 const ENDPOINT = "https://bookapi.cm.hmw.lol/";
 const DetailBook = () => {
   const [detailBook, setDetailBook] = useState({});
@@ -39,9 +40,13 @@ const DetailBook = () => {
         <p className="text-black text-xl font-['Poppins'] pt-3">
           By {detailBook.author?.name}
         </p>
-        <p className="text-black text-xl font-['Poppins'] pt-3">
-          {detailBook.rating}
-        </p>
+        <div className="flex">
+          <p className="text-black text-[20px] font-['Poppins'] mr-5  rounded-full bg-amber-400">
+            {detailBook.rating}
+          </p>
+          <StarRating rating={detailBook.rating} />
+        </div>
+
         <p className="text-black text-xl font-['Poppins'] pt-4">
           {detailBook.synopsis}
         </p>

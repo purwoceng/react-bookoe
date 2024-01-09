@@ -5,7 +5,6 @@ const ENDPOINT = "https://bookapi.cm.hmw.lol/";
 
 function Navbar() {
   const [searchTerm, setSearchTerm] = useState("");
-  const [searchResults, setSearchResults] = useState(null);
   const navigate = useNavigate();
 
   async function handleSearch(event) {
@@ -15,8 +14,7 @@ function Navbar() {
       const response = await fetch(url);
       const json = await response.json();
       console.log(json);
-      setSearchResults(json.results);
-      navigate("/search", { state: { searchResults: json.results } });
+      navigate("/search", { state: { searchResults: json.data } });
     } catch (error) {
       console.log(error);
     }
@@ -61,19 +59,13 @@ function Navbar() {
           </li>
         </ul>
       </div>
-      <form
-        onSubmit={handleSearch}
-        className="form-control w-1/2  flex justify-end items-center "
-      >
+      <form onSubmit={handleSearch}>
         <input
-          className="placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm ml-20"
-          placeholder="Search for anything..."
+          className="placeholder:italic placeholder:text-slate-400 block bg-white w-[300px] border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm ml-20"
+          placeholder="Search by title or author..."
           type="text"
           value={searchTerm}
-          name="search"
-          onChange={(event) => {
-            setSearchTerm(event.target.value);
-          }}
+          onChange={(e) => setSearchTerm(e.target.value)}
         />
       </form>
       <div className="navbar-end">
