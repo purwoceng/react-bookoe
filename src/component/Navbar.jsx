@@ -45,6 +45,7 @@ function Navbar() {
             <NavLink
               to="/latest"
               className="text-[21px] text-sm font-light font-['Poppins']"
+              id="latest"
             >
               Latest
             </NavLink>
@@ -53,6 +54,7 @@ function Navbar() {
             <NavLink
               to="/top_picks"
               className="text-[21px] text-sm font-light font-['Poppins']"
+              id="toppicks"
             >
               Top Picks
             </NavLink>

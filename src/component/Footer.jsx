@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <div className="grid grid-cols-2 mt-12 ml-12 mr-7">
+    <div className="grid grid-cols-2 mt-12 ml-12 mr-7 line border border-solid">
       <div>
         <p className="text-black text-xl font-poppins mb-4">
           Copyright © 2023 Codemasters.id | All Rights Reserved{" "}
