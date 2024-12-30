@@ -6,15 +6,15 @@ const SmallBook = ({ result }) => {
     <div className=" pt-12 h-auto">
       <img
         className="border border-solid w-[277px] h-[346px]"
-        src={result.image_url}
+        src={result.formats["image/jpeg"]}
       ></img>
-      <p className="w-[260px] text-black text-2xl font-semibold font-['Poppins'] leading-loose line-clamp-2">
+      {/* <p className="w-[260px] text-black text-2xl font-semibold font-['Poppins'] leading-loose line-clamp-2">
         {result.title}
       </p>
       <p className="w-[260px] text-black text-xl font-['Poppins'] leading-loose">
         by {result.author.name}
       </p>
-      <StarRating rating={result.rating} className="text-xl" />
+      <StarRating rating={result.rating} className="text-xl" /> */}
       <Link
         key={result.id}
         to={`/books/${result.id}`}

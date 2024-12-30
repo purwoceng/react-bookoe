@@ -5,7 +5,7 @@ import BigBook from "../component/BigBook";
 import SmallBook from "../component/SmallBook";
 import HeroFooter from "../component/HeroFooter";
 
-const ENDPOINT = "https://bookapi.cm.hmw.lol/";
+const ENDPOINT = "https://gutendex.com/books";
 
 const Home = () => {
   const [bigBook, setBigBook] = useState([]);
@@ -24,10 +24,10 @@ const Home = () => {
   };
   async function bookApi() {
     try {
-      const url = `${ENDPOINT}api/books`;
+      const url = `${ENDPOINT}`;
       const response = await fetch(url);
       const json = await response.json();
-      const data = json.data.slice(0, 100);
+      const data = json.results.slice(0, 100);
       setBigBook(shuffleArray(data.slice(0, 4)));
       setSmallBook(shuffleArray(data.slice(0, 4)));
       setBookHero(shuffleArray(data));
@@ -46,12 +46,12 @@ const Home = () => {
       <Hero result={bookHero} />
       <div className="grid grid-cols-2 gap-4 m-12">
         {bigBook.map((result) => (
-          <BigBook key={result.isbn} result={result} />
+          <BigBook key={result.id} result={result} />
         ))}
       </div>
       <div className="grid grid-cols-4 gap-4 m-12">
         {smallBook.map((result) => (
-          <SmallBook key={result.isbn} result={result} />
+          <SmallBook key={result.id} result={result} />
         ))}
       </div>
     </>

@@ -4,22 +4,25 @@ import StarRating from "./createRating";
 const BigBook = ({ result }) => {
   return (
     <div className="grid grid-cols-2 justify-between">
-      <img className="w-[277px] h-[346px]" src={result.image_url}></img>
+      <img
+        className="w-[277px] h-[346px]"
+        src={result.formats["image/jpeg"]}
+      ></img>
       <div className="relative">
         <p className="text-black text-2xl font-semibold font-['Poppins'] line-clamp-2">
           {result.title}
         </p>
         <p className="text-black text-xl font-['Poppins']">
-          By {result.author.name}
+          By {result.authors[0]?.name}
         </p>
         <div className="flex">
           <p className="text-black text-[20px] font-['Poppins'] mr-5  rounded-full bg-amber-400">
-            {result.rating}
+            {/* {result.rating} */}
           </p>
-          <StarRating rating={result.rating} />
+          {/* <StarRating rating={result.rating} /> */}
         </div>
 
-        <p className="text-black text-xl font-['Poppins']">{result.synopsis}</p>
+        <p className="text-black text-xl font-['Poppins']">{result.formats?.['text/plain']}</p>
         <Link
           key={result.id}
           to={`/books/${result.id}`}
